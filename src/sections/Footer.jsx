@@ -2,7 +2,7 @@ import { Twitter, Github, MessageCircle } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="relative py-12 px-6 mt-20 bg-gradient-to-r from-blue-900 to-black text-white">
+    <footer className="relative py-12 px-6 mt-0 md:mt-20 bg-gradient-to-r from-blue-900 to-black text-white">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
         <div>
           <div className="flex items-center space-x-2 mb-4">
