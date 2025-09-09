@@ -4,17 +4,20 @@ import StatsSection from '../src/sections/Stats';
 import FeaturedCollections from '../src/sections/FeaturedCollection';
 import Footer from '../src/sections/Footer';
 import HowItWorks from '../src/sections/HowItWorks';
+import FAQSection from '../src/sections/FAQ';
+import About from '../src/sections/About';
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-br from-purple-900 via-blue-900 to-black text-white overflow-hidden min-h-screen">
-      <canvas id="particles-canvas" className="fixed inset-0 pointer-events-none z-0" />
+    <div className="bg-gradient-to-t from-gray-500 via-gray-950 to-black text-white overflow-hidden">
+
       <Navigation />
-      <Hero />
-      <FeaturedCollections />
-      
-      <StatsSection />
+      <Hero className="m-0 p-0" />
+      <About />
       <HowItWorks />
+      <FeaturedCollections />
+      <StatsSection />
+      <FAQSection />
       <Footer />
     </div>
   );
