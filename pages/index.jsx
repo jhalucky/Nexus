@@ -9,7 +9,7 @@ import About from '../src/sections/About';
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-t from-gray-500 via-gray-950 to-black text-white overflow-hidden">
+    <div className="bg-gradient-to-t from-blue-950 via-gray-950 to-black text-white overflow-hidden">
 
       <Navigation />
       <Hero className="m-0 p-0" />
