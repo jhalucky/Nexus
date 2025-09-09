@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import { Analytics } from "@vercel/analytics/next";
 
 export default function Hero() {
   return (
