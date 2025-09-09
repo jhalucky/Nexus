@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useRef } from 'react';
 import { featuredNFTs } from '../data/mockData';
 import NFTCard from '../components/ui/NFTCard';
@@ -7,35 +9,31 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function FeaturedCollections() {
-  const containerRef = useRef(null);
+  const sectionRef = useRef(null);
 
   useEffect(() => {
-    const cards = containerRef.current.querySelectorAll('.nft-card');
+    const cards = sectionRef.current.querySelectorAll('.nft-card');
 
-    cards.forEach((card, index) => {
-      gsap.fromTo(
-        card,
-        { opacity: 0, y: 50 },
-        {
-          opacity: 1,
-          y: 0,
-          scrollTrigger: {
-            trigger: card,
-            start: 'top 80%',
-            toggleActions: 'play none none none',
-          },
-          duration: 1,
-          delay: index * 0.2,
-        }
-      );
+    gsap.from(cards, {
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none reverse',
+      },
+      opacity: 0,
+      y: 50,
+      stagger: 0.2,
+      duration: 1,
+      ease: 'power3.out',
     });
   }, []);
 
   return (
-    <section className="relative z-10 py-16 px-6 fade-in-section">
+    <section ref={sectionRef} className="relative z-10 py-12 px-6 fade-in-section">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-mono font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-mono font-bold mb-4">
             <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               Trending Collections
             </span>
@@ -45,19 +43,13 @@ export default function FeaturedCollections() {
           </p>
         </div>
 
-        <div
-          ref={containerRef}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredNFTs.map((nft) => (
-            <div key={nft.id} className="nft-card group">
-              <NFTCard nft={nft} />
-            </div>
+            <NFTCard key={nft.id} nft={nft} className="nft-card" />
           ))}
         </div>
       </div>
     </section>
   );
 }
-
 

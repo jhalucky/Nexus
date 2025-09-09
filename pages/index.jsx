@@ -3,6 +3,7 @@ import Hero from '../src/sections/Hero';
 import StatsSection from '../src/sections/Stats';
 import FeaturedCollections from '../src/sections/FeaturedCollection';
 import Footer from '../src/sections/Footer';
+import HowItWorks from '../src/sections/HowItWorks';
 
 export default function Home() {
   return (
@@ -11,7 +12,9 @@ export default function Home() {
       <Navigation />
       <Hero />
       <FeaturedCollections />
+      
       <StatsSection />
+      <HowItWorks />
       <Footer />
     </div>
   );
