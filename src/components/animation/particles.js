@@ -6,7 +6,7 @@ export function initParticles() {
 
   function resizeCanvas() {
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.height = document.documentElement.scrollHeight;
   }
 
   window.addEventListener('resize', resizeCanvas);

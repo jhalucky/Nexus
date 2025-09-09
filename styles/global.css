@@ -19,7 +19,18 @@ html, body {
   z-index: 0;
 }
 
+section {
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
 
+@media (max-width: 768px) {
+  section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }

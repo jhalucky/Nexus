@@ -34,7 +34,7 @@ export default function StatsSection() {
   }, []);
 
   return (
-    <section className="relative z-10 py-16 px-6 bg-gray-900 text-white">
+    <section className="relative z-10 py-16 px-6 mt-16 md:mt-24 bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-10 font-mono">
           <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
