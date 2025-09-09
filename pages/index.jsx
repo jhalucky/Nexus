@@ -1,8 +1,8 @@
-import Navigation from '../components/Navigation';
-import Hero from '../components/Hero';
-import Stats from '../components/Stats';
-import FeaturedCollections from '../components/FeaturedCollection';
-import Footer from '../components/Footer';
+import Navigation from '../src/sections/Navigation';
+import Hero from '../src/sections/Hero';
+import StatsSection from '../src/sections/Stats';
+import FeaturedCollections from '../src/sections/FeaturedCollection';
+import Footer from '../src/sections/Footer';
 
 export default function Home() {
   return (
@@ -10,8 +10,8 @@ export default function Home() {
       <canvas id="particles-canvas" className="fixed inset-0 pointer-events-none z-0" />
       <Navigation />
       <Hero />
-      <Stats />
       <FeaturedCollections />
+      <StatsSection />
       <Footer />
     </div>
   );
